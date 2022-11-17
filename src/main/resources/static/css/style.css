@@ -1,0 +1,14 @@
+body {
+    background-color: lightblue;
+}
+.table{
+    margin: auto;
+    border: 3px solid black;
+}
+tr,td,table{
+    background-color: white;
+}
+.table tr,td{
+    border-bottom: 1px solid black;
+    padding: 15px;
+}

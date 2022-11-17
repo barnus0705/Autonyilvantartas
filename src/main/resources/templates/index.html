@@ -3,18 +3,29 @@
 <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
 <head>
     <meta charset="UTF-8">
-    <title>Szoszi</title>
+    <title>AutóNyilvántartás</title>
 
 </head>
 <body>
 <table class="table">
-    <tr th:each="auto: ${auto}">
-        <td th:text="${auto.id}">id</td>
-        <td th:text="${auto.datum}">datum</td>
-        <td th:text="${auto.km}+' km'">km</td>
-        <td th:text="${auto.marka}">marka</td>
-        <td th:text="${auto.rendszam}">rendszam</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Dátum</th>
+            <th>Km állás</th>
+            <th>Márka</th>
+            <th>Rendszám</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="auto: ${auto}">
+            <td th:text="${auto.id}">id</td>
+            <td th:text="${auto.datum}">datum</td>
+            <td th:text="${auto.km}+' km'">km</td>
+            <td th:text="${auto.marka}">marka</td>
+            <td th:text="${auto.rendszam}">rendszam</td>
+        </tr>
+    </tbody>
 </table>
 </body>
 </html>
